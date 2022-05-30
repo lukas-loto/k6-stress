@@ -32,7 +32,8 @@ The flow is all ready, just change the values in this part of the code: stages:
         { duration: '2m', target: 400 }, // beyond the breaking point
         { duration: '5m', target: 400 },
         { duration: '10m', target: 0 }, // scale down. Recovery stage.
-], ```
+],
+```
   
 The duration is the time the script will take to put the number of VUs (virtual users) on the machine.
 
