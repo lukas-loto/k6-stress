@@ -23,15 +23,15 @@ The index.js file is just an example base file of how to run k6
 The flow is all ready, just change the values in this part of the code: stages: 
   
 ``` [
-        { duration: '2m', target: 100 }, // below normal load
-        { duration: '5m', target: 100 },
-        { duration: '2m', target: 200 }, // normal load
-        { duration: '5m', target: 200 },
-        { duration: '2m', target: 300 }, // around the breaking point
-        { duration: '5m', target: 300 },
-        { duration: '2m', target: 400 }, // beyond the breaking point
-        { duration: '5m', target: 400 },
-        { duration: '10m', target: 0 }, // scale down. Recovery stage.
+        { **duration: '2m', target: 100 }, // below normal load
+        { **duration: '5m', target: 100 },
+        { **duration: '2m', target: 200 }, // normal load
+        { **duration: '5m', target: 200 },
+        { **duration: '2m', target: 300 }, // around the breaking point
+        { **duration: '5m', target: 300 },
+        { **duration: '2m', target: 400 }, // beyond the breaking point
+        { **duration: '5m', target: 400 },
+        { **duration: '10m', target: 0 }, // scale down. Recovery stage.
 ],
 ```
   
@@ -39,9 +39,11 @@ The duration is the time the script will take to put the number of VUs (virtual 
 
 For example in the first two lines of the code above:
   
+```
 { duration: '2m', target: 100 }, // below normal load
 { duration: '5m', target: 100 },
-
+```
+  
 In up to 2 minutes we will have 100 VUs simultaneously running the application (website) and after 5 minutes have elapsed from the previous 2 minutes, we will continue with 100 VUs, that is, we will have 7 minutes with 100 VUs until we go to the next step which is to place 200 VUs simultaneously accessing the system.
   
 # Changing credentials
