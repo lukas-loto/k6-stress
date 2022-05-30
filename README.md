@@ -1,6 +1,8 @@
 # K6 Stress Test
 
-** What do I need to run the load test with k6?
+I will explain here how to run a stress test on GreenMainFrame with K6
+
+# What do I need to run the load test with k6?
 
 It is necessary to have k6 running on the local machine to test the operation.
 
@@ -16,7 +18,7 @@ k6 run purchase.js to run the Stress Test of GreenMainFrame purchase process
   
 The index.js file is just an example base file of how to run k6
 
-# Manipulating the script
+# Manipulating the script (Changing the amount of virtual users and stress test time)
 
 The flow is all ready, just change the values in this part of the code: stages: 
   
@@ -32,7 +34,6 @@ The flow is all ready, just change the values in this part of the code: stages:
         { duration: '10m', target: 0 }, // scale down. Recovery stage.
 ],
   
-
 The duration is the time the script will take to put the number of VUs (virtual users) on the machine.
 
 For example in the first two lines of the code above:
@@ -41,6 +42,8 @@ For example in the first two lines of the code above:
 { duration: '5m', target: 100 },
 
 In up to 2 minutes we will have 100 VUs simultaneously running the application (website) and after 5 minutes have elapsed from the previous 2 minutes, we will continue with 100 VUs, that is, we will have 7 minutes with 100 VUs until we go to the next step which is to place 200 VUs simultaneously accessing the system.
+  
+# Changing credentials
   
 The last code editing step is to change the access credentials to the corresponding procedures, for example in the line below:
   
