@@ -23,8 +23,7 @@ The index.js file is just an example base file of how to run k6
 The flow is all ready, just change the values in this part of the code:  
   
 ``` 
-stages:
-[
+stages: [
         { duration: '2m', target: 100 }, // below normal load
         { duration: '5m', target: 100 },
         { duration: '2m', target: 200 }, // normal load
