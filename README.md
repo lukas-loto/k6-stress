@@ -50,10 +50,12 @@ In up to 2 minutes we will have 100 VUs simultaneously running the application (
   
 The last code editing step is to change the access credentials to the corresponding procedures, for example in the line below:
   
+```
 response = http.post(
 'https://auth-api.greenmainframe.dev/api/v1/auth/login',
 '{"email":"lukas.domingos+91919@webera.com","password":"#Flamengo123"}',
 {
+```
   
 in which we must change the field "email" and "password" with our correct credentials to access the GreenMainFrame system for proper access to the site, without any error.
   
