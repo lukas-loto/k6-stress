@@ -1,5 +1,6 @@
-# k6-stress
+# K6 Stress Test
 
+# What do I need to run the load test with k6?
 
 It is necessary to have k6 running on the local machine to test the operation.
 
@@ -8,11 +9,15 @@ For this you need to have a package installer installed on the machine, if you u
 It can be done here: https://chocolatey.org/install
 
 To do the Stress Test with k6 in GreenMainFrame it is necessary to run a git clone in a folder on the computer. 
+
+# Testing the script and manipulating it
+
 Open the Flows folder in the terminal and run the command k6 run <filename>, for example, k6 run auth.js to run the Stress Test of GreenMainFrame authentication
+
 k6 run purchase.js to run the Stress Test of GreenMainFrame purchase process
   
 The index.js file is just an example base file of how to run k6
-  
+
 The flow is all ready, just change the values ​​in this part of the code: stages: 
   
 [
