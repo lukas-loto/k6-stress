@@ -1,6 +1,6 @@
 # K6 Stress Test
 
-**What do I need to run the load test with k6?
+** What do I need to run the load test with k6?
 
 It is necessary to have k6 running on the local machine to test the operation.
 
