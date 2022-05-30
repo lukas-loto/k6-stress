@@ -18,7 +18,7 @@ k6 run purchase.js to run the Stress Test of GreenMainFrame purchase process
   
 The index.js file is just an example base file of how to run k6
 
-The flow is all ready, just change the values ​​in this part of the code: stages: 
+The flow is all ready, just change the values in this part of the code: stages: 
   
 [
         { duration: '2m', target: 100 }, // below normal load
